@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+void print_menu() {
+    printf("\t\t\t\t\t\t  CALCULATOR\n");
+    printf("\n1) ADDITION\n");
+    printf("2) SUBTRACTION\n");
+    printf("3) MULTIPLICATION\n");
+    printf("4) DIVISION\n");
+    printf("5) EXPONENTIATION\n");
+    printf("0) TO EXIT\n");
+}
+
+int main() {
+    int op;
+    float a, b;
+
+    print_menu();
+
+    while (1) {
+        printf("\nEnter your desired operation (0-5): ");
+        scanf("%d", &op);
+
+        if (op == 0) {
+            printf("Exiting the program\n");
+            break;
+        }
+
+        if (op < 0 || op > 5) {
+            printf("Enter a valid choice\n");
+            continue;
+        }
+
+        printf("Enter first number: ");
+        scanf("%f", &a);
+        printf("Enter second number: ");
+        scanf("%f", &b);
+
+        if (op == 1) {
+            printf("\nSUM = %.2f\n", a + b);
+        } else if (op == 2) {
+            printf("\nDIFFERENCE = %.2f\n", a - b);
+        } else if (op == 3) {
+            printf("\nPRODUCT = %.2f\n", a * b);
+        } else if (op == 4) {
+            if (b == 0) {
+                printf("Division by zero isn't possible\n");
+            } else {
+                printf("\nQUOTIENT = %.2f\n", a / b);
+            }
+        } else if (op == 5) {
+            printf("\nEXPONENT = %.2f\n", pow(a, b));
+        } else {
+            printf("You entered a wrong choice!\n");
+        }
+    }
+
+    return 0;
