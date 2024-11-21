@@ -10,6 +10,8 @@ git add calculator.txt
 
 git remote add origin (link)
 
+git push
+
 To use the calculator;
 
 enter operator choice then enter num1 and num 2
