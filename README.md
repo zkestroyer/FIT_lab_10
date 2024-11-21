@@ -1,14 +1,14 @@
 # FIT_lab_10
 
+git config --global user.name 
+
+git config --global user.email
+
 use git init to initialise empty repository
 
-git clone "link"
+git add calculator.txt
 
-cd "rep name"
-
-touch calculator.txt to create file
-
-git push origin master
+git remote add origin (link)
 
 To use the calculator;
 
